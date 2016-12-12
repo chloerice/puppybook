@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 export default class SinglePuppy extends Component {
 
   render () {
+    const puppy = this.props.selectedPuppy;
+
     return (
-      <div>
-        <h2>PUPPY NAME GOES HERE</h2>
+      <div key={puppy.id}>
+        <h2>{puppy.name}</h2>
         <div>
-          <img src="http://placehold.it/400x400" />
+          <img src={puppy.image} />
         </div>
       </div>
     )
